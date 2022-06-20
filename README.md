@@ -1,6 +1,6 @@
 # Blockchain Basics
 
-Development environment for blockchain projects and some demo projects (so called Boxes from Truffle-Suite).
+Development environment for blockchain projects and some demo projects (so called [Truffle Boxes](https://trufflesuite.com/boxes/)) using [Truffle Suite](https://trufflesuite.com/).
 
 ## Getting Started
 
