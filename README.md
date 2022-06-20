@@ -23,7 +23,9 @@ Clone the github repository
 
     git clone https://github.com/gkhaos/blockchain-basics
 
-Start VSCode and Open Development Container
+Start VSCode and Open Development Container (in VSCode, hit F1 and then run the command)
+
+    >Remote-Containers: Rebuild and Reopen in Container
 
 To start the first project, navigate into the folder of the first project
 
