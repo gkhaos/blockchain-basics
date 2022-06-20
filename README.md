@@ -23,6 +23,8 @@ Clone the github repository
 
     git clone https://github.com/gkhaos/blockchain-basics
 
+__If using Docker Desktop and working (or having symlinks to) outside of `/home`__, open Docker Desktop and go to Settings, Resources, File Sharing and add the path to the local repository to the shared paths.
+
 Start VSCode and Open Development Container (in VSCode, hit F1 and then run the command)
 
     >Remote-Containers: Rebuild and Reopen in Container
