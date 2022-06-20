@@ -1,7 +1,5 @@
 // For configuration options see https://trufflesuite.com/docs/truffle/reference/configuration/
 module.exports = {
-  contracts_build_directory: "../client/src/contracts",
-
   networks: {
     development: {
       host: "ganache-cli",
@@ -18,5 +16,9 @@ module.exports = {
       },
       version: "0.8.15"
     }
+  },
+
+  ens: {
+    enabled: true
   }
 }

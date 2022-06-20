@@ -10,6 +10,7 @@ RUN npm install -g babel-runtime
 RUN npm install -g truffle
 RUN npm install -g @openzeppelin/contracts
 RUN npm install -g @poanet/solidity-flattener
+RUN npm install -g lite-server
 
 USER vscode
 WORKDIR /home/app

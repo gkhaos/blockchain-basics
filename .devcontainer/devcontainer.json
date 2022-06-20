@@ -13,8 +13,7 @@
         "trufflesuite-csi.truffle-vscode"
     ],
     "runServices": [
-        "ganache-cli",
-        "blockscout"
+        "ganache-cli"
     ],
     "shutdownAction": "stopCompose",
     "remoteUser": "vscode"

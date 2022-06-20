@@ -2,13 +2,13 @@ App = {
   web3Provider: null,
   contracts: {},
 
-  init: async function() {
+  init: async function () {
     // Load pets.
-    $.getJSON('../pets.json', function(data) {
+    $.getJSON('../pets.json', function (data) {
       var petsRow = $('#petsRow');
       var petTemplate = $('#petTemplate');
 
-      for (i = 0; i < data.length; i ++) {
+      for (i = 0; i < data.length; i++) {
         petTemplate.find('.panel-title').text(data[i].name);
         petTemplate.find('img').attr('src', data[i].picture);
         petTemplate.find('.pet-breed').text(data[i].breed);
@@ -23,7 +23,7 @@ App = {
     return await App.initWeb3();
   },
 
-  initWeb3: async function() {
+  initWeb3: async function () {
     /*
      * Replace me...
      */
@@ -31,7 +31,7 @@ App = {
     return App.initContract();
   },
 
-  initContract: function() {
+  initContract: function () {
     /*
      * Replace me...
      */
@@ -39,17 +39,17 @@ App = {
     return App.bindEvents();
   },
 
-  bindEvents: function() {
+  bindEvents: function () {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
   },
 
-  markAdopted: function() {
+  markAdopted: function () {
     /*
      * Replace me...
      */
   },
 
-  handleAdopt: function(event) {
+  handleAdopt: function (event) {
     event.preventDefault();
 
     var petId = parseInt($(event.target).data('id'));
@@ -61,8 +61,8 @@ App = {
 
 };
 
-$(function() {
-  $(window).load(function() {
+$(function () {
+  $(window).load(function () {
     App.init();
   });
 });
