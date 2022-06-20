@@ -1,0 +1,21 @@
+{
+    "name": "Blockchain Basics",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "docker-compose.yml"
+    ],
+    "service": "truffle-suite",
+    "workspaceFolder": "/workspace",
+    "settings": {},
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "JuanBlanco.solidity",
+        "trufflesuite-csi.truffle-vscode"
+    ],
+    "runServices": [
+        "ganache-cli",
+        "blockscout"
+    ],
+    "shutdownAction": "stopCompose",
+    "remoteUser": "vscode"
+}

@@ -1,0 +1,46 @@
+version: '2'
+services:
+  truffle-suite:
+    container_name: truffle-suite
+    
+    user: vscode
+
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    
+    volumes:
+      - .:/workspace:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    stdin_open: true
+    tty: true
+
+  blockscout-db:
+    container_name: blockscout-db
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: 'blockscout'
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+  blockscout:
+    container_name: blockscout
+    image: blockscout/blockscout:latest
+    ports:
+      - 4000:4000
+    command: '/bin/bash -c "mix do ecto.create, ecto.migrate, phx.server"'
+    environment:
+      ETHEREUM_JSONRPC_VARIANT: 'ganache'
+      ETHEREUM_JSONRPC_HTTP_URL: 'http://ganache-cli:8545/'
+      ETHEREUM_JSONRPC_TRACE_URL: 'http://ganache-cli:8545/'
+      ETHEREUM_JSONRPC_WS_URL: 'ws://ganache-cli:8545/'
+      ETHEREUM_JSONRPC_TRANSPORT: 'http'
+      DATABASE_URL: 'postgresql://postgres:@blockscout-db:5432/blockscout?ssl=false'
+      ECTO_USE_SSL: false
+      NETWORK: 57771
+      SUBNETWORK: 'Test'
+      LOGO: '/images/blockscout_logo.svg'
+      LOGO_FOOTER: '/images/blockscout_logo.svg'
+      PORT: 4000
+    depends_on: [ "blockscout-db" ]
