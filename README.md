@@ -27,7 +27,7 @@ __If using Docker Desktop and working (or having symlinks to) outside of `/home`
 
 Start VSCode and Open Development Container (in VSCode, hit F1 and then run the command)
 
-    >Remote-Containers: Rebuild and Reopen in Container
+    >Remote-Containers: Reopen in Container
 
 To start the first project, navigate into the folder of the first project
 
