@@ -16,8 +16,19 @@
 ### 01-react
 Simple demo to see that everything is up and running
 
+- `truffle/`:`truffle compile`
+- `truffle/`:`truffle migrate`
+- `client/`:`npm run dev`
+
 ### 02-pet-shop
 Development goal: Smart Contract for Adoption
+
+Necessary knowledge:
+- `uint8`-, `address`-type
+- `require`
+- `view`
+- `msg.sender`
+- `memory`
 
 Preamble:
 - 16 Pets
@@ -41,9 +52,8 @@ Migrate:
 ```console
 truffle migrate
 poa-solidity-flattener contract/Contract.sol # --> out/Contract_flat.sol
-# manually copy TRIMMED content
+# manually copy TRIMMED content from out/
 # if using library, add library
 # Verify contract
-# Connect wallet
+# Optional: Connect wallet
 ```
-
