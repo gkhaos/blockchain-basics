@@ -43,7 +43,7 @@ With the first terminal, navigate into truffle and compile, test, and migrate th
 
 
 ## Authors
-  - **Manoel Kraus** - *Configured dev environment, selected boxes and planned tutorial* - [AIIS](https://aiis.fh-zwickau.de)
+  - **Manoel Kraus** - *Configured dev environment, selected boxes and planned tutorial* - [AIIS](https://aiis.digital)
 
 See also the list of
 [contributors](https://github.com/gkhaos/blockchain-basics/contributors)
